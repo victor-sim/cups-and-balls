@@ -1,0 +1,342 @@
+//////////// -- 1 -- ////////////////
+body {
+	text-align: center;
+	font-family: 'Nunito', sans-serif;
+}
+
+header{
+	font-family: 'Lemon', cursive;
+}
+
+#game {
+	border-radius: 10px;
+	border: 1px solid #666;
+	position: relative;
+	background: #232 url(../images/bg_mario.png);
+	width: 960px;
+	height: 540px;
+	margin: 0 auto;
+	
+	/* Chrome, Safari, Opera*/
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	
+	/* IE 10*/
+	display:-ms-flexbox;
+	-ms-flex-pack:center;
+	-ms-flex-align:center;
+	
+	/* Firefox */
+	display:-moz-box;
+	-moz-box-pack:center;
+	-moz-box-align:center;
+	
+	/* W3C */
+	display:box;
+	box-pack:center;
+	box-align:center;
+}
+}
+
+#characters {
+	position: relative;
+	width: 960px;
+	height: 540px;
+}
+
+.character {
+	width: 60px;
+	height: 100px;
+	position: absolute;
+	background: url(../images/marios.png) 0 0;
+	z-index: 10;
+	top: 367px;
+	left: 50px;
+}
+
+#bomb{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left:-100px;
+	top:367px;
+	z-index: 11;
+}
+
+@keyframes boom {
+    0% { transform: rotate(0deg) translateX(1px) rotate(0deg) ;}
+    20% { transform: rotate(0deg) translateX(1px) rotate(30deg) ;}
+    40% { transform: rotate(0deg) translateX(1px) rotate(-30deg) ;}
+    60% { transform: rotate(0deg) translateX(1px) rotate(30deg) ;}
+    80% { transform: rotate(0deg) translateX(1px) rotate(-30deg) ;}
+    90% { transform: rotate(0deg) translateX(1px) rotate(30deg) ;}
+    100%{ transform: rotate(0deg) translateX(1px) rotate(-30deg);  }
+}
+@-webkit-keyframes boom {
+    0% { -webkit-transform: rotate(0deg) translateX(1px) rotate(0deg) ;}
+    20% { -webkit-transform: rotate(0deg) translateX(1px) rotate(30deg) ;}
+    40% { -webkit-transform: rotate(0deg) translateX(1px) rotate(-30deg) ;}
+    60% { -webkit-transform: rotate(0deg) translateX(1px) rotate(30deg) ;}
+    80% { -webkit-transform: rotate(0deg) translateX(1px) rotate(-30deg) ;}
+    90% { -webkit-transform: rotate(0deg) translateX(1px) rotate(30deg) ;}
+    100%{ -webkit-transform: rotate(0deg) translateX(1px) rotate(-30deg);  }
+}
+
+
+#blastLeft{
+	position: absolute;
+	width: 300px;
+	height: 210px;
+	left: 150px;
+	top: -100px;
+	z-index: 18;
+}
+#blastRight{
+	position: absolute;
+	width: 300px;
+	height: 210px;
+	left: 630px;
+	top: -100px;
+	z-index: 18;
+}
+
+.blastBoomLeft{
+    display: inline-block; 
+    animation: boom 1s ease-out 1;
+    -webkit-animation: boom 1s ease-out 1;
+	background: url(../images/blast.png) 0 0;
+}
+
+.blastBoomRight{
+    display: inline-block; 
+    animation: boom 1s ease-out 1;
+    -webkit-animation: boom 1s ease-out 1;
+	background: url(../images/blast.png) 0 0;
+}
+
+
+@keyframes throwLeft {
+    0% { transform: rotate(-70deg) translateX(290px) rotate(0deg) ;}
+    100%{ transform: rotate(0deg) translateX(290px) rotate(360deg);  }
+}
+@-webkit-keyframes throwLeft {
+    0% { -webkit-transform: rotate(-70deg) translateX(290px) rotate(0deg) ;}
+    100%{ -webkit-transform: rotate(0deg) translateX(290px) rotate(360deg);  }
+}
+
+@keyframes throwRight {
+    0% { transform: rotate(-35deg) translateX(720px) rotate(0deg) ;}
+    100%{ transform: rotate(0deg) translateX(720px) rotate(360deg);  }
+}
+@-webkit-keyframes throwRight {
+    0% { -webkit-transform: rotate(-35deg) translateX(720px) rotate(0deg) ;}
+    100%{ -webkit-transform: rotate(0deg) translateX(720px) rotate(360deg);  }
+}
+
+.throwBombLeft {
+    display: inline-block; 
+    animation: throwLeft 0.7s ease-out 1;
+    -webkit-animation: throwLeft 0.7s ease-out 1;
+	background: url(../images/bomb.png) 0 0;
+}
+
+.throwBombRight { 
+    display: inline-block;
+    animation: throwRight 0.7s ease-out 1;
+    -webkit-animation: throwRight 0.7s ease-out 1;
+	background: url(../images/bomb.png) 0 0;
+}
+
+
+#items {
+	position: absolute;
+	width: 50px;
+	height: 360px;
+	top: 25px;
+	left: 880px; 
+}
+
+.item{
+	position: relative;
+	width: 50px;
+	height: 50px;
+	cursor:pointer;
+	border-radius: 5px;
+	border: 1px solid #333;
+}
+
+.bomb{
+	background: rgba(0, 0, 255, 0.7) url(../images/item_bomb.png) 0 0;
+}
+
+.indicator{
+	background: rgba(255, 255, 255, 0.7) url(../images/item_indicator.png) 0 0;
+}
+
+.eraser{
+	background: rgba(0, 0, 0, 0.7) url(../images/item_eraser.png) 0 0;
+}
+
+#sound{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 55px;
+	left: 10px;
+	cursor: pointer;
+}
+
+.soundon{
+	background: url(../images/soundon.png) 0 0;
+}
+
+.soundoff{
+	background: url(../images/soundoff.png) 0 0;
+}
+
+#start{
+	border-radius: 10px;
+	border: 1px solid #333;
+	position: absolute;
+	width: 240px;
+	height: 90px;
+	background: rgba(255, 255, 255, 0.4) url(../images/start.png) 0 0;
+	top: 200px;
+	left: 360px;
+	z-index: 20;
+	cursor: pointer;
+}
+
+#select{
+	position: absolute;
+	width: 340px;
+	height: 50px;
+	top: 160px;
+	left: 310px;
+	z-index: 2;
+	font-family: 'Lemon', cursive;
+	transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-webkit-transition: all 0.7s;
+	cursor:default;
+}
+
+.appear{
+	opacity: 1;
+}
+
+.disappear{
+	opacity: 0;
+}
+
+#level{
+	position: absolute;
+	width: 100px;
+	height: 30px;
+	top: 10px;
+	left: 10px;
+	z-index: 18;
+	font-family: 'Changa One', cursive;
+	font-size: 'xx-large';
+}
+
+#levelnum{
+	position: absolute;
+	width: 100px;
+	height: 30px;
+	top: 10px;
+	left: 110px;
+	z-index: 18;
+	font-family: 'Changa One', cursive;
+	font-size: 'xx-large';
+}
+
+#gameover{
+	position: absolute;
+	width: 480px;
+	height: 350px;
+	background: url(../images/gameover.png) 0 0;
+	top: 50px;
+	left: 240px;
+	z-index: 14;
+}
+
+
+#block{
+	position: absolute;
+	width: 120px;
+	height: 200px;
+	background-color:#FFFFFF;
+	top: 270px;
+	left: -121px;
+	z-index: 14;
+}
+
+
+
+.div-removed {
+	transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-webkit-transition: all 0.7s;
+	transform:rotate(180deg);
+	-ms-transform:rotate3d(0,1,0,180deg); /* IE 9 */
+	-webkit-transform:rotate3d(0,1,0,180deg); /* Opera, Chrome, and Safari */
+	opacity: 0;
+	cursor:not-allowed;
+}
+
+.character-removed {
+	transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-webkit-transition: all 0.7s;
+	transform:rotate(180deg);
+	-ms-transform:rotate3d(0,0,1,180deg); /* IE 9 */
+	-webkit-transform:rotate3d(0,0,1,180deg); /* Opera, Chrome, and Safari */
+	opacity: 0;
+	cursor:not-allowed;
+}
+
+
+.MarioIdleL {background-position: 0 0;}
+.MarioIdleR {background-position: -60px 0;}
+.MarioRunL {background-position: -120px 0;}
+.MarioRunR {background-position: -180px 0;}
+.MarioWalkL1 {background-position: 0 -100px;}
+.MarioWalkL2 {background-position: -60px -100px;}
+.MarioWalkL3 {background-position: -120px -100px;}
+.MarioWalkL4 {background-position: -180px -100px;}
+.MarioWalkL5 {background-position: -240px -100px;}
+.MarioWalkL6 {background-position: -300px -100px;}	
+.MarioWalkR1 {background-position: 0 -200px;}
+.MarioWalkR2 {background-position: -60px -200px;}
+.MarioWalkR3 {background-position: -120px -200px;}
+.MarioWalkR4 {background-position: -180px -200px;}
+.MarioWalkR5 {background-position: -240px -200px;}
+.MarioWalkR6 {background-position: -300px -200px;}
+.MarioSitL {background-position: 0 -300px;}
+.MarioSitR {background-position: -60px -300px;}
+.MarioJumpL {background-position: -120px -300px;}
+.MarioJumpR {background-position: -180px -300px;}
+
+.LuigiIdleL {background-position: 0 -400px;}
+.LuigiIdleR {background-position: -60px -400px;}
+.LuigiRunL {background-position: -120px -400px;}
+.LuigiRunR {background-position: -180px -400px;}
+.LuigiWalkL1 {background-position: 0 -500px;}
+.LuigiWalkL2 {background-position: -60px -500px;}
+.LuigiWalkL3 {background-position: -120px -500px;}
+.LuigiWalkL4 {background-position: -180px -500px;}
+.LuigiWalkL5 {background-position: -240px -500px;}
+.LuigiWalkL6 {background-position: -300px -500px;}	
+.LuigiWalkR1 {background-position: 0 -600px;}
+.LuigiWalkR2 {background-position: -60px -600px;}
+.LuigiWalkR3 {background-position: -120px -600px;}
+.LuigiWalkR4 {background-position: -180px -600px;}
+.LuigiWalkR5 {background-position: -240px -600px;}
+.LuigiWalkR6 {background-position: -300px -600px;}
+.LuigiSitL {background-position: 0 -700px;}
+.LuigiSitR {background-position: -60px -700px;}
+.LuigiJumpL {background-position: -120px -700px;}
+.LuigiJumpR {background-position: -180px -700px;}
+
