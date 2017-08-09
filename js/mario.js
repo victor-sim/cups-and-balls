@@ -51,8 +51,6 @@ marioGame.Position = [
 	0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 ];
 
-
-
 /*
  *		This game's main starting function
  */
@@ -81,7 +79,6 @@ $(function(){
   main loop of the game
 */
 function gameLoop(){
-
 	if(marioGame.enStatus == enStep.nInit) // before user start the game
 	{
 		if(marioGame.nTurn == 0 && marioGame.nFrame == 0)
