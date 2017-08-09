@@ -83,7 +83,6 @@ header{
     100%{ -webkit-transform: rotate(0deg) translateX(1px) rotate(-30deg);  }
 }
 
-
 #blastLeft{
 	position: absolute;
 	width: 300px;
@@ -114,7 +113,6 @@ header{
     -webkit-animation: boom 1s ease-out 1;
 	background: url(../images/blast.png) 0 0;
 }
-
 
 @keyframes throwLeft {
     0% { transform: rotate(-70deg) translateX(290px) rotate(0deg) ;}
@@ -297,7 +295,6 @@ header{
 	cursor:not-allowed;
 }
 
-
 .MarioIdleL {background-position: 0 0;}
 .MarioIdleR {background-position: -60px 0;}
 .MarioRunL {background-position: -120px 0;}
@@ -339,4 +336,3 @@ header{
 .LuigiSitR {background-position: -60px -700px;}
 .LuigiJumpL {background-position: -120px -700px;}
 .LuigiJumpR {background-position: -180px -700px;}
-
