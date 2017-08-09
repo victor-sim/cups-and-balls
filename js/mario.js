@@ -1,5 +1,4 @@
 
-
 // Enumeration value for game status
 var enStep = {
 	nInit: 0
